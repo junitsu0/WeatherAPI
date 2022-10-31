@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="f1.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Weather App</span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <form onsubmit="return handleSubmit()" id="weatherForm">
+        <div class="mb-3">
+          <label for="inputCity" class="form-label">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputCity"
+            aria-describedby="inputCity"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <h1 class="display-3" id="appendCity"></h1>
+
+      <div class="card text-white bg-danger mb-3" style="width: 18rem">
+        <div class="card-header">High</div>
+        <div class="card-body">
+          <p class="card-text" id="appendHigh"></p>
+        </div>
+      </div>
+
+      <div class="card text-white bg-primary mb-3" style="width: 18rem">
+        <div class="card-header">Low</div>
+        <div class="card-body">
+          <p class="card-text" id="appendLow"></p>
+        </div>
+      </div>
+      <div class="card text-white bg-info mb-3" style="width: 18rem">
+        <div class="card-header">Forecast</div>
+        <div class="card-body">
+          <p class="card-text" id="appendForecast"></p>
+        </div>
+      </div>
+      <div class="card text-white bg-success mb-3" style="width: 18rem">
+        <div class="card-header">Humidity</div>
+        <div class="card-body">
+          <p class="card-text" id="appendHumidity"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
